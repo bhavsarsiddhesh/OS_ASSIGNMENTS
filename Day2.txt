@@ -1,0 +1,169 @@
+============================================== Assignment 2 =============================================
+Q.1) => mkdir a1,a2,a3,a4,a5,a6,a7,a8,a9,a10
+
+#QUE 2
+a)To find length of a string
+=> echo -n hello | wc -m
+c)Copying string
+=>
+d)Concatenation of strings
+=>str1="Hello"
+  str2="Cdac"
+  str3="$str1$str2"
+e)compare two strings 
+=> read -p "Enter first String" str1 
+   read -p "Enter first String" str1
+
+    if [ $str1 == $str2 ] ; then
+          echo "Both strings are Equal"
+    else
+          echo "strings are unequal"
+    fi
+
+f)Reversing a string
+=> echo welcome | rev
+
+#QUE 3 Write a shell script to rename all files in the current directory with 
+=> for (( i=1 ; i<=10 ; i++ ))
+   do
+         mv "$i" "a$i"
+   done
+ 
+#QUE 4 Write a script that print environment variable
+  (Print $HOME,$PATH,$SHELL,$HISTORY,$LOGNAME,$TERM)
+=> echo $HOME,echo $HISTORY,echo $LOGNAME,echo $PATH,echo $TERM,echo $SHELL.
+
+#QUE 5  Write a shell script to print all files permissions in current directory
+(Not name or other details)(Use cut commands)
+=> ls -la | cut -b " " 1-12
+
+#QUE 6 Write a shell script to print all files permissions and name of file
+=> ls -al
+
+
+# SHELL SCIPTS
+
+1. Write a script To check given year is leap or not.
+=>  echo "enter a year"
+    read YEAR
+    if (( ($YEAR % 4) == 0 )) ; then 
+        echo "THIS  Is Leap Year"
+    else
+        echo "THIS Is Not Leap Year"
+   fi
+
+#QUE 2. Write a script to print day of the week using
+a) elif	
+=>    echo "enter number between 1 to 7"
+      read num
+      if [[ $num -eq 1 ]] 
+      then 
+      echo "Sunday"  
+      elif [[ $num -eq 2 ]]
+      then 
+      echo "Monday"
+      elif [[ $num -eq 3 ]]
+      then  
+      echo "Tuesday"
+      lif [[ $num -eq 4]]
+      then 
+      echo "Wednesday"
+      elif [[ $num -eq 5]]
+      then 
+      echo "Thursday"
+      lif [[ $num -eq 6 ]]
+      then 
+      echo "Friday"
+      lif [[ $num -eq 7 ]]
+      then 
+      echo "saturday"
+      fi
+
+b) case
+=>     echo "enter number between 1 to 7"
+       read num
+       case $num in
+        1) echo "Sunday" ;;
+        2) echo "Monday" ;;
+        3) echo "Tuesday" ;;
+        4) echo "Wednesday" ;;
+        5) echo "Thursday" ;;
+        6) echo "Friday" ;;
+        7) echo "Saturday" ;;
+       esac
+
+#QUE 3 
+a) Write a script to find biggest of three no.s
+=>       echo "enter 1st number"
+         read n1
+         echo "enter 1st number"
+         read n2
+         echo "enter 1st number"
+         read n3
+         if [ $n1 -gt $2 ] && [ $n1 -gt $n3 ]
+         then 
+         echo " $n1 is greatest number"
+         elif [ $n2 -gt $n1 ] && [ $n2 -gt $n3 ]
+         then
+         echo " $n2 is greatest number"
+         else
+         echo " $n3 is greatest number"
+         fi
+b) To find avg of 3 no.s, read no.s from keyboard
+=>      echo "Enter 1st number"
+        read n1
+        echo "Enter 1st number"
+        read n2
+        echo "Enter 1st number"
+        read n3
+        sum=`expr $n1 + $n2 + $n3`
+        avg=`expr $sum / 3`
+        echo "Sum = $sum"
+        echo "Average = $avg"
+
+4.Write a program to check wahether given no.is even or odd.
+=>   read -p "Enter Your number: " number
+     if[ $((number%2)) -eq 0 ]
+     then
+     echo "Number is even."
+     else
+     echo "Number is odd."
+     fi
+   
+5.Write a program to print calendar of current month in next year,previous years.
+=>   cal -m9 2021
+     cal -m9 2019
+
+6.Write a program to find sum and product of two no.s using let,expr,bc
+   a) read -p "Enter First No:" num1
+      read -p "Enter First No:" num2
+      sum=$(( $num1 + $num2 ))
+      mul=$(( $num1 * $num2 ))
+      echo $sum 
+      echo $mul
+   
+   b) echo "Enter two numbers"
+      read num1 num2
+      sum = 'expr $num1 + $num2'
+      echo "The sum is = $sum"   
+   c) bc:$ echo 'scale=4;10+20' | bc0
+
+7.Write a script to generate Fibonacci series.
+=>   N=10 
+     a=0  
+     b=1 
+     echo "The Fibonacci series is : "
+     for (( i=0; i<N; i++ )) 
+     do
+	echo -n "$a "
+	fn=$((a + b)) 
+	a=$b 
+	b=$fn 
+    done
+
+8. Write a shell script to reverse the single strings. 
+=>echo "hello world"|rev
+
+10. Write a shell script to print the reverse of an input number.
+=> read -p "Enter a number: " num
+   echo $num | rev

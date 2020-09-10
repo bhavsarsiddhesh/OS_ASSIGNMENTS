@@ -1,0 +1,43 @@
+============================ Assignment 1 =============================
+#QUE 1 
+a) => mkdir a ,mkdir b, mkdir c , cp -r c a
+b) => mv b c
+c) => alias siddhesh='ls -lh'
+d) => mv a cdac
+ 
+#Que 2 
+a)touch file1.txt file2.txt file3.txt file4.txt file5.txt // grep -i "s" file1.txt file2.txt file3.txt file4.txt file5.txt 
+  
+b)cat file.txt , nano file.txt 
+c)touch f1.txt f2.txt f3.txt f4.txt f5.txt
+d)rm -r a b c
+
+#Que 3
+a)vi file1,cat file1
+b)cat --number file1
+c)tac file1
+d)cat file1 >> file2
+
+#QUE 4
+a)ls -1,ls -a
+b)
+C)touch .file1.txt
+e)ls -r
+=========================================================================================================
+#Que 
+
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+		a)user can read and write the file a.txt and b.txt => chmod o+rw a.txt b.txt
+		b)user can write the file c.txt => chmod o+w c.txt
+		c)user can exectuable the file d.sh => chmod o+x d.sh
+
+Q2. Change the permission of the previous directory to executable only.
+=>    chmod o+x siddhesh.
+
+Q3. Change the permission of the previous directory to read only.
+=>    chmod o-x siddhesh, chmod o+r siddhesh.
+
+Q4. Use echo to list the all files of your home directory.
+=>    echo * .*
